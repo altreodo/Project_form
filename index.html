@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="side.css">
+
+</head>
+<body>
+    <form id="ok">
+    <div class="m">
+        <div class="b">
+            <header><h1><u>Fill this form</u></h1></header>
+            <header><h3><u>DEEPAK MAURYA 20BCE10727</u></h1></header>
+        </div>
+        <div class="c">
+          First,enter your credentials
+            <div class="fg">
+                Gmailid:<br>
+                <input type="email"placeholder="xyz@gmail.com" required><br>
+                Password:<br>
+                <input type="password" required><br>
+            </div>
+            <hr size="2" color="black">
+            Now enter your detail
+            <div class="fg">
+                Name:<br>
+                <input type="text" placeholder="Enter your fullname" required><br>
+                Addrees:<br>
+                <textarea>Enter your address</textarea><br>
+                Date of Birth:<br>
+                <input type="date" placeholder="DD/MM/YYYY"><br>
+                Gender:<br>
+                <select>
+                    <option>Choose your Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select><br>
+            </div>
+            <p class="op"><input type="checkbox">I agree to the <a href="#"> Terms and conditions </a>and <a href="#">Privacy policy</a>
+                <br><br><br>
+                <input type="submit"  onclick="alert('The form has been submmited')" value="Submit">
+                    <br><br><br>
+              <input type="reset" onclick="myfunction()" value="Reset">
+                <br><br><br>
+                <p class ="np" id='1'>Feeling bored??? <a href="" onclick="random()">click here</a></p>
+            </div>
+        </div>
+</form>
+</body>
+<script>
+    function myfunction(){
+        document.getElementById("ok").reset();
+    }
+    function random(){
+        x=prompt("Enter any number between 1 to 10");
+        y=Math.floor((Math.random()*10)+1);
+        p=0;
+        while(x!=y){
+            if(!prompt("Try again")){
+                p++;
+                break;
+            }else{
+                x=prompt("Try again");
+            }
+        }
+        if(p==0){
+        alert("Congratulation you won the game");
+        }
+    }
+</script>
+</html>
